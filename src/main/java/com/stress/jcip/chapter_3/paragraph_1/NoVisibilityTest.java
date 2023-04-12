@@ -21,27 +21,19 @@ import static org.openjdk.jcstress.annotations.Expect.ACCEPTABLE;
 @State()
 public class NoVisibilityTest {
 
-//    private NoVisibility noVisibility = new NoVisibility();
-
     @Actor
     public void actor1() {
         NoVisibility.t1();
-//        noVisibility.t1();
-//        noVisibility.t2();
     }
 
     @Actor
     public void actor2() {
         NoVisibility.t2();
-//        noVisibility.t2();
-//        noVisibility.t1();
     }
 
     @Arbiter
     public void arbiter(IZ_Result r) {
         r.r1 = NoVisibility.number;
-//        r.r1 = noVisibility.number;
         r.r2 = NoVisibility.ready;
-//        r.r2 = noVisibility.ready;
     }
 }
