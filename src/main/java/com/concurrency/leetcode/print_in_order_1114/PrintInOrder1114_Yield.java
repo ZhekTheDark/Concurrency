@@ -1,29 +1,23 @@
-package com.concurrency.leetcode;
+package com.concurrency.leetcode.print_in_order_1114;
 
-public class PrintInOrder1114 {
+public class PrintInOrder1114_Yield {
 
     public static class Foo {
 
-//        volatile boolean firstReady = false;
-//        volatile boolean secondReady = false;
+        volatile boolean firstReady = false;
+        volatile boolean secondReady = false;
 
-        boolean firstReady = false;
-        boolean secondReady = false;
-        public String result;
+        public String result = "";
 
         public Foo() {
-            result = "";
         }
 
-//        public void first(Runnable printFirst) throws InterruptedException {
         public void first(Runnable printFirst) {
-
             // printFirst.run() outputs "first". Do not change or remove this line.
             printFirst.run();
             firstReady = true;
         }
 
-//        public void second(Runnable printSecond) throws InterruptedException {
         public void second(Runnable printSecond) {
             while (!firstReady)
                 Thread.yield();
@@ -32,7 +26,6 @@ public class PrintInOrder1114 {
             secondReady = true;
         }
 
-//        public void third(Runnable printThird) throws InterruptedException {
         public void third(Runnable printThird) {
             while (!secondReady)
                 Thread.yield();
