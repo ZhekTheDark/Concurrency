@@ -1,6 +1,6 @@
-package com.stress.leetcode.print_in_order_1114;
+package com.stress.leetcode._1114_print_in_order;
 
-import com.concurrency.leetcode.print_in_order_1114.PrintInOrder1114_Yield;
+import com.concurrency.leetcode._1114_print_in_order.PrintInOrder1114_CountDownLatch;
 import org.openjdk.jcstress.annotations.*;
 import org.openjdk.jcstress.infra.results.L_Result;
 
@@ -14,9 +14,9 @@ import static org.openjdk.jcstress.annotations.Expect.ACCEPTABLE;
 @Outcome(id = "312", expect = ACCEPTABLE, desc = "v5")
 @Outcome(id = "321", expect = ACCEPTABLE, desc = "v6")
 @State()
-public class PrintInOrder1114_YieldTest {
+public class PrintInOrder1114_CountDownLatchTest {
 
-    private PrintInOrder1114_Yield.Foo foo = new PrintInOrder1114_Yield.Foo();
+    private PrintInOrder1114_CountDownLatch.Foo foo = new PrintInOrder1114_CountDownLatch.Foo();
 
     @Actor
     public void actor1() {
