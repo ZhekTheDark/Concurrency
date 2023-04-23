@@ -1,6 +1,6 @@
-package com.stress.leetcode.print_in_order_1114;
+package com.stress.leetcode._1114_print_in_order;
 
-import com.concurrency.leetcode.print_in_order_1114.PrintInOrder1114_Semaphore;
+import com.concurrency.leetcode._1114_print_in_order.PrintInOrder1114_Semaphore;
 import org.openjdk.jcstress.annotations.*;
 import org.openjdk.jcstress.infra.results.L_Result;
 
